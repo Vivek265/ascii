@@ -1,0 +1,30 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="./inde.css" rel="stylesheet">
+</head><body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script >
+    
+    var base_convert = function(number, initial_base, change_base) {
+    if ((initial_base && change_base) <2 || (initial_base && change_base)>36)
+     return 'Base between 2 and 36';
+    
+     return parseInt(number + '', initial_base)
+     .toString(change_base);
+ }
+    function convert(){var t=" ";
+     var x=document.getElementById('stringText').value;
+     var tmp='';
+for (var i = 0; i < x.length; i++) tmp+=(x.charCodeAt(i))+" ";
+
+  document.getElementById('ascii').value=tmp;
+ }
+ </script><div class="container h-100  align-items-center " id="bg"><span id="datatype">Text</span><br>
+<input oninput="convert()" type="text" id="stringText" placeholder="Enter Text"><br><br><br>
+<span id="datatype">ASCII</span><br>
+<input  type="text" id="ascii"  placeholder="ASCII" ><br><br>
+
+</div>
+</body></html>
